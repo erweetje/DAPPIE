@@ -10,12 +10,12 @@ class dier {
     private $chipnummer;
     private $paspoortnummer;
     private $kleur;
-    private $medbeeld;
+    
     private $klantId;
     
     
     public function __construct($id, $naam, $stamboomnaam, $soort, $ras,$geboortedatum, $gewicht,
-            $chipnummer, $paspoortnummer, $kleur, $medbeeld, $klantId) {
+            $chipnummer, $paspoortnummer, $kleur,  $klantId) {
                 $this->id=$id;
                 $this->naam=$naam;
                 $this->stamboomnaam=$stamboomnaam;
@@ -26,7 +26,7 @@ class dier {
                 $this->chipnummer=$chipnummer;
                 $this->paspoortnummer=$paspoortnummer;
                 $this->kleur=$kleur;
-                $this->medbeeld=$medbeeld;
+                
                 $this->klantId=$klantId;
     }
     
@@ -58,9 +58,7 @@ class dier {
      public function getKleur() {
          return $this->kleur;
     }
-     public function getMedbeeld() {
-         return $this->medbeeld;
-    }
+    
      public function getKlantId() {
          return $this->klantId;
     }
@@ -91,10 +89,7 @@ class dier {
     public function setKleur($kleur) {
         $this->kleur=$kleur;
     }
-    public function setMedbeeld($medbeeld) {
-        $this->medbeeld=$medbeeld;
-               
-    }
+   
     public function setklantId($klantId) {
         $this->klantId=$klantId;
     }
