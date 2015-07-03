@@ -11,8 +11,9 @@ class Klant {
     private $email;
     private $wachtwoord;
     private $tel;
+    private static $idMap=array();
 
-    public function __construct($id, $naam, $voornaam, $straat, $huisnummer,
+    private function __construct($id, $naam, $voornaam, $straat, $huisnummer,
             $postcode, $woonplaats, $email, $wachtwoord, $tel){
         $this->id=$id;
         $this->naam=$naam;
@@ -25,6 +26,15 @@ class Klant {
         $this->wachtwoord=$wachtwoord;
         $this->tel=$tel;
         
+    }
+    
+    public static function create($id, $naam, $voornaam, $straat, $huisnummer,
+            $postcode, $woonplaats, $email, $wachtwoord, $tel) {
+        if (!isset(self::$idMap[$id])) {
+            self::$idMap[$id]=new Klant($id, $naam, $voornaam, $straat, $huisnummer, $postcode, $woonplaats, $email, $wachtwoord, $tel);
+            
+        }
+        return self::$idMap;
     }
     
     public function getId() {
