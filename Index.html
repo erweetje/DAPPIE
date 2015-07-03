@@ -29,39 +29,44 @@
           <fieldset>
           <legend> Gegevens KLANT </legend>
           <p><br/>
-          <label for="aanspreekVorm">Aanspreekvorm </label><br/>
+          <!-- <label for="aanspreekVorm">Aanspreekvorm </label><br/>
           <select name="aanspreekVorm" id="aanspreekVorm"><br/>
                     <option>Dhr.</option>
                     <option>Mevr.</option>
-          </select>
+          </select> -->
           <br/>
+          <!--<form action="consultatie.php" method="post"> -->
+          Klantnr :<br />
+          <input type="text" size="10" name="KlantId" /><br/>
           Voornaam :<br />
           <input type="text" size="50" name="voornaam" /><br/>
-          Familienaam :<br />
-          <input type="text" size="50" name="familienaam" /><br />
-          Bedrijfsnaam / Beroep :<br />
-          <input type="text" size="50" name="bedrijf" /> </textarea><br />
+          Naam :<br />
+          <input type="text" size="50" name="naam" /><br />
+          <br />
           Straat:<br />
-          <input type="text" size="50" name="straat" /><br />
+          <input type="text" size="100" name="straat" /><br />
           Nr:<br />
-          <input type="text" "size=10" name="nr" /><br />
-          Gemeente:<br />
-          <input type="text" size="50" name="gemeente" /><br />
+          <input type="text" "size=50" name="nr" /><br />
+          Woonplaats:<br />
+          <input type="text" size="150" name="woonplaats" /><br />
           Land:<br />
           <input type="text" size="50" name="land" /><br />
           Postcode:<br />
-          <input type="text" size="50" name="postcode" /><br />
+          <input type="text" size="10" name="postcode" /><br />
           Tel:<br />
           <input type="text" size="50" name="tel" /><br />
           GSM:<br />
           <input type="text" size="50" name="tel" /><br />
           E-mail:<br />
-          <input type="email" size="50" name="email" /><br />
+          <input type="email" size="255" name="email" /><br />
           Algemene info klant:<br />
-          <input type="text" size="50" name="notaKlant" /><br/>
+          <textarea rows="5" cols="50" name="notaKlant"></textarea><br/>
          Specifieke wensen klant:<br />
-          <input type="text" size="50" name="wensKlant" />
-          <br/>
+          <textarea rows="5" cols="50" name="wensKlant"></textarea><br/>
+          <br />
+          <input type="submit" value="Wijziging Opslaan" />
+          <br />
+          <input type="submit" value="Nieuwe Klant" />
           </p>
           
           </fieldset>
@@ -69,49 +74,65 @@
           
           <fieldset>
           <legend> CONSULTATIE - BEHANDELING </legend>
-          <br/>
-          Datum  :<br />
+          <p><br/>
+          <p>ConsultatieNr:<br />
+          <input type="text" size="10" name="Id_Consultatie" /><br />
+          <p>Datum  :<br />
           <input type="text" size="50" name="datum" /><br />
           Consultatie uitgevoerd door :<br />
           <input type="text" size="50" name="naamDierenarts" /><br />
-          Bevindingen/info huidige consultatie:<br />
-          <input type="text" size="50" name="AlgNota" /><br />
-          Datum volgende bezoek (optioneel):<br />
-          <input type="text" size="50" name="DatumVolgende" /><br />
-          Benodigde info volgende bezoek (optioneel):<br />
-          <input type="text" size="50" name="DatumVolgende" /><br />
-          Overzicht laatste bezoeken:<br />
-          <input type="text" size="50" name="DatumVolgende" /><br />
-          <br/>
-         </fieldset>
+          Notitie:<br />
+          <textarea rows="7" cols="50" name="InfoHuidig"></textarea>
+          <br />
+          Nr dier  :<br />
+          <input type="text" size="10" name="Dier_Id" /><br />
+          Gewicht:<br />
+          <input type="text" size="10" name="Gewicht(kg)" /><br />         
+          <br />
+          <input type="submit" value="Wijziging Opslaan" />
+          <br />
+          <input type="submit" value="Nieuwe Consultatie" />
+          </p> 
+          
+          
+          
+          </fieldset>
          <br/>
           
           <fieldset>
           <legend> Gegevens DIER </legend>
           <br/>
           Nr dier  :<br />
-          <input type="text" size="50" name="diersoort" /><br />
+          <input type="text" size="10" name="Dier_Id" /><br />
           Diersoort  :<br />
           <input type="text" size="50" name="diersoort" /><br />
+          Ras  :<br />
+          <input type="text" size="50" name="diersoort" /><br />
           Naam dier (roepnaam):<br />
-          <input type="text" size="50" name="voornaam" /><br />
+          <input type="text" size="50" name="naam" /><br />
           Chipnummer:<br />
           <input type="text" size="50" name="straat" /><br />
           Paspoortnummer:<br />
           <input type="text" size="50" name="straat" /><br />
           
           Stamboomnaam(optioneel):<br />
-          <input type="text" size="50" name="voornaam" /><br />
+          <input type="text" size="100" name="stamboomnaam" /><br />
           Geboortedatum :<br />
           <input type="text" size="50" name="voornaam" /><br />
           Vaccinatiegegevens:<br />
           <input type="text" size="50" name="straat" /><br />
           Volgende vaccinatie (datum en soort):<br />
           <input type="text" size="50" name="straat" /><br />
-          Kenmerken dier (optioneel):<br />
-          <input type="text" size="50" name="straat" /><br />
-          Foto (optioneel):<br />
-          <input type="text" size="50" name="straat" /><br />
+          Kleur (optioneel):<br />
+          <input type="text" size="50" name="kleur" /><br />
+          Medbeeld (optioneel):<br />
+          <input type="text" size="50" name="medbeeld" /><br />
+          <br />
+          <input type="submit" value="Wijziging Opslaan" />
+          <br />
+          <input type="submit" value="Nieuw Dier" />
+          
+        
         
          </fieldset>
          <br/>
@@ -119,9 +140,6 @@
           <fieldset>
           <legend>  </legend>
           <br/>
-          
-          <input type="submit" value="Opslaan" />
-          <input type="cancel" value="Annuleren" />
           </fieldset>
            
           </form>
